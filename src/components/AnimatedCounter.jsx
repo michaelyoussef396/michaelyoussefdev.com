@@ -1,60 +1,45 @@
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
-
-import { counterItems } from "../constants";
-
-gsap.registerPlugin(ScrollTrigger);
+// AnimatedCounter.jsx
+import React from 'react'
+import CountUp from 'react-countup'
+import { useInView } from 'react-intersection-observer'
+import { counterItems } from '../constants'
 
 const AnimatedCounter = () => {
-  const counterRef = useRef(null);
-  const countersRef = useRef([]);
-
-  useGSAP(() => {
-    countersRef.current.forEach((counter, index) => {
-      const numberElement = counter.querySelector(".counter-number");
-      const item = counterItems[index];
-
-      // Set initial value to 0
-      gsap.set(numberElement, { innerText: "0" });
-
-      // Create the counting animation
-      gsap.to(numberElement, {
-        innerText: item.value,
-        duration: 2.5,
-        ease: "power2.out",
-        snap: { innerText: 1 }, // Ensures whole numbers
-        scrollTrigger: {
-          trigger: "#counter",
-          start: "top center",
-        },
-        // Add the suffix after counting is complete
-        onComplete: () => {
-          numberElement.textContent = `${item.value}${item.suffix}`;
-        },
-      });
-    }, counterRef);
-  }, []);
-
   return (
-    <div id="counter" ref={counterRef} className="padding-x-lg xl:mt-0 mt-32">
+    <div id="counter" className="padding-x-lg xl:mt-0 mt-32">
       <div className="mx-auto grid-4-cols">
-        {counterItems.map((item, index) => (
-          <div
-            key={index}
-            ref={(el) => el && (countersRef.current[index] = el)}
-            className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center"
-          >
-            <div className="counter-number text-white-50 text-5xl font-bold mb-2">
-              0 {item.suffix}
+        {counterItems.map((item, index) => {
+          // Set up an intersection observer for this counter
+          const [ref, inView] = useInView({
+            triggerOnce: true,
+            threshold: 0.5,
+          })
+
+          return (
+            <div
+              key={index}
+              ref={ref}
+              className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center"
+            >
+              <div className="text-white/50 text-5xl font-bold mb-2">
+                { /* If it's in view, animate up; otherwise show 0 */ }
+                {inView ? (
+                  <CountUp
+                    end={item.value}
+                    suffix={item.suffix}
+                    duration={2.5}
+                  />
+                ) : (
+                  `0${item.suffix}`
+                )}
+              </div>
+              <div className="text-white/50 text-lg">{item.label}</div>
             </div>
-            <div className="text-white-50 text-lg">{item.label}</div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AnimatedCounter;
+export default AnimatedCounter
