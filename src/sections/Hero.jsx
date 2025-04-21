@@ -1,3 +1,4 @@
+import Button from "../components/Button"
 import { words } from "../constants"
 
 const Hero = () => {
@@ -12,10 +13,39 @@ const Hero = () => {
         <header className='flex flex-col justtify-center md:w-full w-screen md:px-20 px-5'>
             <div className='flex flex-col gap-7'>
                 <div className='hero-text'>
-                    <h1>Shaping Designs</h1>
+                    <h1>
+                        Shaping
+                        <span className="slide">
+                            <span className="wrapper">
+                                {words.map((word) => (
+                                    <span key={word.text} className="flex items-center gap-1 pb-2">
+                                        <img
+                                        src={word.imgPath}
+                                        alt={word.text}
+                                        className="xl:size-12 md:size-10 size-7 md:p-2 rounded-full bg-white-50"
+                                        />
+                                        <span>
+                                            {word.text}
+                                        </span>
+                                    </span>
+                                ))}
+                            </span>
+                        </span>
+                    </h1>
                     <h1>into Real Projects</h1>
                     <h1>that Deliver Results</h1>
                 </div>
+            
+                <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+                Hi, I’m Michael, a full stack developer based in Melbourne with a passion for
+                building.
+                </p>
+
+                <Button
+                text="See My Work"
+                className="md:w-80 md:h-16 w-60 h-12"
+                id="button"
+                />
             </div>             
         </header>
         {/* RIGHT */}
