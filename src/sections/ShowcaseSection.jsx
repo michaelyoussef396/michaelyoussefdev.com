@@ -53,8 +53,8 @@ const ShowcaseSection = () => {
               <img src="images/project1.png" alt="ryde" />
             </div>
             <div className='text-content'>
-              <h2>On-Demand Rides Made Simple with a powerful. User-Friendly App Called Ryde</h2>
-              <p>An App built with React Native, Expo & TailwindCSS for a fast, user-friendly experience</p>
+              <h2 className="text-[var(--color-bone)]">On-Demand Rides Made Simple with a powerful. User-Friendly App Called Ryde</h2>
+              <p className="text-[var(--color-bone)]">An App built with React Native, Expo & TailwindCSS for a fast, user-friendly experience</p>
             </div>
 
           </div>
@@ -62,14 +62,14 @@ const ShowcaseSection = () => {
           {/* RIGHT */}
           <div className='project-list-wrapper overflow-hidden'>
             <div className='project' ref={libraryRef}>
-              <div className='image-wrapper bg-[#ffefdb]'>
+              <div className='image-wrapper'>
                 <img src="images/project2.png" alt="Library Management Platform" />
               </div>
               <h2>Library Management Platform</h2>
             </div>
 
             <div className='project' ref={ycDirectoryRef}>
-              <div className='image-wrapper bg-[#ffe7db]'>
+              <div className='image-wrapper'>
                 <img src="images/project3.png" alt="YC Directory" />
               </div>
               <h2>YC Directory - A Startup Showcase App</h2>

@@ -64,10 +64,10 @@ const FeatureCards = () => {
             <div className="size-14 flex items-center justify-center rounded-full">
               <img src={imgPath} alt={title} />
             </div>
-            <h3 className="text-white text-2xl font-semibold mt-2">
+            <h3 className="text-[var(--color-powder-blue)] text-2xl font-semibold mt-2">
               {title}
             </h3>
-            <p className="text-white-50 text-lg">{desc}</p>
+            <p className="text-[var(--color-text-primary)] text-lg">{desc}</p>
           </div>
         ))}
       </div>

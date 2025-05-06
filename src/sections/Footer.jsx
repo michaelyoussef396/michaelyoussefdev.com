@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="flex flex-col justify-center">
-          <p>Terms & Conditions</p>
+          <p className="hover:text-[var(--color-powder-blue)]">Terms &amp; Conditions</p>
         </div>
         <div className="socials">
           {socialImgs.map((socialImg, index) => (
@@ -15,7 +15,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex flex-col justify-center">
-          <p className="text-center md:text-end">
+          <p className="text-center md:text-end hover:text-[var(--color-powder-blue)]">
             © {new Date().getFullYear()} Michael Youssef. All rights reserved.
           </p>
         </div>

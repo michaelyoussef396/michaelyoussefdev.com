@@ -8,7 +8,7 @@ const HeroLights = () => (
       angle={0.15}
       penumbra={0.2}
       intensity={100}
-      color="white"
+      color="#D0E6FD"
     />
     {/* bluish overhead lamp */}
     <spotLight

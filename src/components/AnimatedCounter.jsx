@@ -19,9 +19,9 @@ const AnimatedCounter = () => {
             <div
               key={index}
               ref={ref}
-              className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center"
+              className="rounded-lg p-10 flex flex-col justify-center bg-[var(--color-black-100)]"
             >
-              <div className="text-white/50 text-5xl font-bold mb-2">
+              <div className="text-[var(--color-bone)] text-5xl font-bold mb-2">
                 { /* If it's in view, animate up; otherwise show 0 */ }
                 {inView ? (
                   <CountUp
@@ -33,7 +33,7 @@ const AnimatedCounter = () => {
                   `0${item.suffix}`
                 )}
               </div>
-              <div className="text-white/50 text-lg">{item.label}</div>
+              <div className="text-[var(--color-bone)] text-lg">{item.label}</div>
             </div>
           )
         })}

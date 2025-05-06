@@ -121,17 +121,17 @@ const Experience = () => {
                         <img src={card.logoPath} alt="logo" />
                       </div>
                       <div>
-                        <h1 className="font-semibold text-3xl">{card.title}</h1>
-                        <p className="my-5 text-white-50">
+                        <h1 className="font-semibold text-3xl text-[var(--color-bone)]">{card.title}</h1>
+                        <p className="my-5 text-[var(--color-powder-blue)]">
                           🗓️&nbsp;{card.date}
                         </p>
-                        <p className="text-[#839CB5] italic">
+                        <p className="text-[var(--color-powder-blue)] italic">
                           Responsibilities
                         </p>
-                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
+                        <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-[var(--color-text-primary)]">
                           {card.responsibilities.map(
                             (responsibility, index) => (
-                              <li key={index} className="text-lg">
+                              <li key={index} className="text-lg text-[var(--color-bone)]">
                                 {responsibility}
                               </li>
                             )
