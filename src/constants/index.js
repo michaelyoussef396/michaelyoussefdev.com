@@ -1,20 +1,17 @@
-
 const words = [
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
-    { text: "Code", imgPath: "/images/code.svg" },
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
-    { text: "Code", imgPath: "/images/code.svg" },
+    { text: "Design", imgPath: "/images/ideas.svg" },
+    { text: "Development", imgPath: "/images/concepts.svg" },
+    { text: "SEO", imgPath: "/images/designs.svg" },
+    { text: "Automations", imgPath: "/images/code.svg" },
+    { text: "AI", imgPath: "/images/ideas.svg" },
+    { text: "Strategy", imgPath: "/images/concepts.svg" },
 ];
 
 const counterItems = [
     { value: 2, suffix: "+", label: "Years of Experience" },
-    { value: 8, suffix: "+", label: "Satisfied Clients" },
+    { value: 7, suffix: "+", label: "Happy Clients" },
     { value: 15, suffix: "+", label: "Completed Projects" },
-    { value: 90, suffix: "%", label: "Client Retention Rate" },
+    { value: 95, suffix: "%", label: "Client Retention Rate" },
 ];
 
 const navLinks = [
@@ -38,39 +35,28 @@ const navLinks = [
 
   const expCards = [
     {
-      review: "Michael brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-      imgPath: "/images/exp1.png",
+      review: "As Co‑Founder and Lead Designer/Developer at Sole Media, I oversee all agency operations—from crafting custom web experiences and automations to managing SEO, email marketing, and ad campaigns—empowering our clients to grow and succeed online.",
+      imgPath: "/images/exp1.webp",
       logoPath: "/images/logo1.png",
-      title: "Frontend Developer",
-      date: "January 2023 - Present",
+      title: "Co‑Founder & Lead Designer/Developer",
+      date: "August  2024 - Present",
       responsibilities: [
-        "Developed and maintained user-facing features for the Hostinger website.",
-        "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-        "Optimized web applications for maximum speed and scalability.",
+        "Designed & coded a fully custom site, including animations and responsive layouts.",
+        "Implemented oSEO best practices—boosting organic traffic by 50% in 6 months.",
+        "Built email marketing flows & automated lead nurture sequences.",
+        "Managed paid ads across Google and Facebook to generate qualified inquiries.",
       ],
     },
     {
-      review: "Michael’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-      imgPath: "/images/exp2.png",
-      logoPath: "/images/logo2.png",
-      title: "Full Stack Developer",
-      date: "June 2020 - December 2023",
+      review: "Michael’s excellent problem-solving abilities, solid technical skills, and strong teamwork during his Software Engineering Internship. His contributions to development, debugging, performance testing, and API integration were instrumental to the success of our projects.",
+      title: "Software Engineering Intern",
+      date: "December 2023 – December 2024",
       responsibilities: [
-        "Led the development of Docker's web applications, focusing on scalability.",
-        "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-        "Contributed to open-source projects that were used with the Docker ecosystem.",
-      ],
-    },
-    {
-      review: "Michael’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-      imgPath: "/images/exp3.png",
-      logoPath: "/images/logo3.png",
-      title: "React Native Developer",
-      date: "March 2019 - May 2020",
-      responsibilities: [
-        "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-        "Improved app performance and user experience through code optimization and testing.",
-        "Coordinated with the product team to implement features based on feedback.",
+        "Assisted in the development and debugging of software projects.",
+        "Wrote code in JavaScript, React, and Python.",
+        "Collaborated with senior developers to enhance system architecture.",
+        "Conducted software performance testing and optimization.",
+        "Gained hands-on experience in database management and API integration.",
       ],
     },
   ];
@@ -78,8 +64,8 @@ const navLinks = [
   const abilities = [
     {
       imgPath: "/images/seo.png",
-      title: "Quality Focus",
-      desc: "Delivering high-quality results while maintaining attention to every detail.",
+      title: "Idea to Execution",
+      desc: "I turn your vision into a polished, high‑impact website—every detail covered, from wireframe to launch.",
     },
     {
       imgPath: "/images/chat.png",
@@ -95,19 +81,19 @@ const navLinks = [
 
   const techStackIcons = [
     {
-      name: "React Developer",
+      name: "React & Next.js",
       modelPath: "/models/react_logo-transformed.glb",
       scale: 1,
       rotation: [0, 0, 0],
     },
     {
-      name: "Python Developer",
+      name: "Python & Flask",
       modelPath: "/models/python-transformed.glb",
       scale: 0.8,
       rotation: [0, 0, 0],
     },
     {
-      name: "Backend Developer",
+      name: "Full Stack Developer",
       modelPath: "/models/node-transformed.glb",
       scale: 5,
       rotation: [0, -Math.PI / 2, 0],
@@ -128,45 +114,45 @@ const navLinks = [
 
   const testimonials = [
     {
-      name: "Esther Howard",
-      mentions: "@estherhoward",
+      name: "Mould & Restoration Co",
+      mentions: "mouldandrestoration.com.au",
       review:
-        "I can’t say enough good things about Michael. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-      imgPath: "/images/client1.png",
+        "Michael designed our entire site and handled on‑page SEO. Within two weeks, inbound leads jumped 40%—all thanks to his eye for design, clean code and SEO expertise.",
+      imgPath: "/images/client1.avif",
     },
     {
-      name: "Wade Warren",
-      mentions: "@wadewarren",
+      name: "Quality Care Providers",
+      mentions: "qualitycareproviders.com.au",
       review:
-        "Working with Michael was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-      imgPath: "/images/client3.png",
+        "Working with Michael was seamless. He built a beautiful, accessible site, then boosted our organic traffic by 30% through his SEO and email‑automation work.",
+      imgPath: "/images/client3.avif",
     },
     {
-      name: "Guy Hawkins",
-      mentions: "@guyhawkins",
+      name: "Eden International",
+      mentions: "edeninternational.com.au",
       review:
-        "Collaborating with Michael was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. If you're seeking to elevate your website and elevate your brand, Michael is the ideal partner.",
-      imgPath: "/images/client2.png",
+        "Michael delivered a scalable Next.js build, nailed our SEO strategy and now we rank on page one for every major keyword.",
+      imgPath: "/images/client2.webp",
     },
     {
-      name: "Marvin McKinney",
-      mentions: "@marvinmckinney",
+      name: "Alera Activewear",
+      mentions: "aleraactive.com",
       review:
-        "Michael was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-      imgPath: "/images/client5.png",
+        "From Shopify theme customizations to full email‑flow automations and ad management, Michael drove a 25% lift in sales in the first quarter. Highly recommend.",
+      imgPath: "/images/client5.jpg",
     },
     {
-      name: "Floyd Miles",
-      mentions: "@floydmiles",
+      name: "MOR Events",
+      mentions: "morevents.com.au",
       review:
-        "AMichael’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-      imgPath: "/images/client4.png",
+        "Michael built our MOR Events site from scratch with Next.js, delivering a sleek, lightning‑fast single‑page experience.",
+      imgPath: "/images/client4.jpg",
     },
     {
-      name: "Albert Flores",
-      mentions: "@albertflores",
+      name: "Social Sphere",
+      mentions: "socialsphere.icu",
       review:
-        "Michael was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+        "Social Sphere’s landing page is stunning thanks to Michael’s clean designs and on‑page SEO. Sign‑ups climbed 30% within two weeks of launch.",
       imgPath: "/images/client6.png",
     },
   ];
@@ -175,19 +161,23 @@ const navLinks = [
     {
       name: "insta",
       imgPath: "/images/insta.png",
-    },
-    {
-      name: "fb",
-      imgPath: "/images/fb.png",
-    },
-    {
-      name: "x",
-      imgPath: "/images/x.png",
+      link: "https://www.instagram.com/michaelyoussefdev"
     },
     {
       name: "linkedin",
       imgPath: "/images/linkedin.png",
+      link: "https://www.linkedin.com/in/michael-youssef-93625327a/"
     },
+    {
+      name: "github",
+      imgPath: "/images/github.png",
+      link: "https://github.com/michaelyoussef396"
+    },
+    {
+      name: "medium",
+      imgPath: "/images/medium.svg",
+      link: "https://medium.com/@michaelyoussef396"
+    }
   ];
   
 

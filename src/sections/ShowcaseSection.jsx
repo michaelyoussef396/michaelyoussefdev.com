@@ -2,12 +2,13 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Button from "../components/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ShowcaseSection = () => {
   const sectionRef = useRef(null);
-  const rydeRef = useRef(null);
+  const SoleRef = useRef(null);
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
 
@@ -20,7 +21,7 @@ const ShowcaseSection = () => {
     );
 
     // Animations for each app showcase
-    const cards = [rydeRef.current, libraryRef.current, ycDirectoryRef.current];
+    const cards = [SoleRef.current, libraryRef.current, ycDirectoryRef.current];
 
     cards.forEach((card, index) => {
       gsap.fromTo(
@@ -48,14 +49,19 @@ const ShowcaseSection = () => {
       <div className='w-full'>
         <div className='showcaselayout'>
           {/* LEFT */}
-          <div className='first-project-wrapper' ref={rydeRef}>
+          <div className='first-project-wrapper' ref={SoleRef}>
             <div className='image-wrapper'>
-              <img src="images/project1.png" alt="ryde" />
+              <img src="images/project1.png" alt="Sole Media Agency" />
             </div>
             <div className='text-content'>
-              <h2 className="text-[var(--color-bone)]">On-Demand Rides Made Simple with a powerful. User-Friendly App Called Ryde</h2>
-              <p className="text-[var(--color-bone)]">An App built with React Native, Expo & TailwindCSS for a fast, user-friendly experience</p>
+              <h2 className="text-[var(--color-bone)]">Sole Media Agency</h2>
+              <p className="text-[var(--color-bone)]">Co‑Founder &amp; Lead Designer/Developer. I build and design custom sites, handle SEO, email marketing, automations, and ad management while consistently helping businesses thrive online.</p>
             </div>
+            <Button
+              text="View Project"
+              link="https://solemedia.com.au/"
+              className="mt-5"
+            />
 
           </div>
 
@@ -63,16 +69,32 @@ const ShowcaseSection = () => {
           <div className='project-list-wrapper overflow-hidden'>
             <div className='project' ref={libraryRef}>
               <div className='image-wrapper'>
-                <img src="images/project2.png" alt="Library Management Platform" />
+                <img src="images/project2.jpg" alt="Mould and Restoration Co" />
               </div>
-              <h2>Library Management Platform</h2>
+              <h2 className="text-[var(--color-bone)]">Mould & Restoration Co.</h2>
+              <p className="text-[var(--color-bone)]">
+                Designed a fully SEO‑optimized site. I handled on‑page SEO, design, development, and ensured strong online visibility for their Launch.
+              </p>
+              <Button
+                text="View Project"
+                link="https://mouldandrestoration.com.au"
+                className="mt-5"
+              />
             </div>
 
             <div className='project' ref={ycDirectoryRef}>
               <div className='image-wrapper'>
-                <img src="images/project3.png" alt="YC Directory" />
+                <img src="images/project3.png" alt="Eden International" />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2 className="text-[var(--color-bone)]">Eden International</h2>
+              <p className="text-[var(--color-bone)]">
+                Built a scalable Next.js site for a student/migration‑visa agency with 12 service pages, on‑page SEO to drive organic traffic.
+              </p>
+              <Button
+                text="View Project"
+                link="https://edeninternational.com.au"
+                className="mt-5"
+              />
             </div>
           </div>
           

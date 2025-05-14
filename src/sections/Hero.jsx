@@ -46,13 +46,15 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
+              <h1>into Real Results</h1>
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Michael Youssef, a Full Stack developer based in Melbourne with a passion for
-              building.
+            I’m Michael Youssef — co‑founder of Sole Media and Full‑Stack/AI dev 
+            <br />
+            from Melbourne. I build SEO‑driven, automation‑powered websites
+            <br />
+            that clients love.
             </p>
 
             <Button
